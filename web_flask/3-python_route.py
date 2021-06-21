@@ -18,7 +18,7 @@ def hello_v2():
     return "HBNB"
 
 
-@app.route("/C/<text>", strict_slashes=False)
+@app.route("/c/<text>", strict_slashes=False)
 def c_text():
     """return C followed by a stream"""
     return "C {}".format(text.replace('_', ' '))
