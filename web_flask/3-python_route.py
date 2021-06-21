@@ -19,7 +19,7 @@ def hello_v2():
 
 
 @app.route("/c/<text>", strict_slashes=False)
-def c_text():
+def c_text(text):
     """return C followed by a stream"""
     return "C {}".format(text.replace('_', ' '))
 
