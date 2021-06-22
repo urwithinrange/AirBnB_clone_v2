@@ -64,3 +64,7 @@ class FileStorage:
                     self.all().pop(k)
                     break
             self.save()
+
+    def close(self):
+        """method for deserializing the JSON to objects"""
+        self.reload()

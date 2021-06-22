@@ -63,3 +63,11 @@ class DBStorage():
         new_sess = sessionmaker(bind=self.__engine, expire_on_commit=False)
         Session = scoped_session(new_sess)
         self.__session = Session()
+
+    def close(self):
+        """
+        Connections are returned to their connection
+        pool and any transactional state is rolled back
+        """
+         if self.__session:
+             self.__session.remove()
