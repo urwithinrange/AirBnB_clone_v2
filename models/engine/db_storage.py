@@ -70,4 +70,4 @@ class DBStorage():
         pool and any transactional state is rolled back
         """
         if self.__session:
-            self.__session.remove()
+            self.__session.close()
