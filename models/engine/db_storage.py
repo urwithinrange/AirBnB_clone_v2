@@ -69,5 +69,5 @@ class DBStorage():
         Connections are returned to their connection
         pool and any transactional state is rolled back
         """
-         if self.__session:
-             self.__session.remove()
+        if self.__session:
+            self.__session.remove()
